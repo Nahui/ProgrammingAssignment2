@@ -42,7 +42,7 @@ cacheSolve <- function(x, ...) {
         # if not, calculate the inverse matrix and...
         message("Matrix inverse not found in the cache. Calculating it...")
         matrix <- x$get()
-        inverse <- solve(matrix)
+        inverse <- solve(matrix, ...)
         
         # ...and save it in the cache
         x$setinv(inverse)
